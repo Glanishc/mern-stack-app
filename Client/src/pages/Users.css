@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 0 50px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.image-container video {
+    width: 100%;
+    position: relative;
+    right: 100px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.event-info {
+    flex: 1;
+    text-align: left;
+}
+
+.event-info h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: 20px 0;
+}
+
+.time-box {
+    background-color: white;
+    color: #003F60;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.time-box span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.register-btn {
+    background-color: #00A8E8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #007CBA;
+}
+
+
+.apply-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position:absolute;
+    right: 700px;
+    bottom: 80px;
+    width: 1000px;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+.verification-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+    color: black;
+    position:absolute;
+    right: 700px;
+    bottom: 80px;
+    width: 1000px;
+}
+
+.verification-btn:hover {
+    background-color: yellow;
+}
+
+.joined-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    position: absolute;
+    right: 700px;
+    bottom: 80px;
+    width: 1000px;
+}
+
+.joined-btn:hover {
+    background-color: darkgreen;
+}
+.apply-car {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00ff2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position:absolute;
+    right: 280px;
+    bottom: 80px;
+    width: 400px;
+}
+.apply-car:hover {
+    background-color: darkgreen;
+}
+.apply-car a {
+    top: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
