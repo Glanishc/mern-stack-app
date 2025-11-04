@@ -1,11 +1,16 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-function RunServer(){
+async function RunServer() {
     try {
-        mongoose.connect('mongodb://localhost:27017');
-        console.log('MongoDB Connected')
+        // Use environment variable for production, fallback to local for development
+        const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
+        
+        await mongoose.connect(mongoURI);
+        console.log('MongoDB Connected Successfully');
     } catch (error) {
-        console.log(error)
+        console.error('MongoDB Connection Error:', error);
+        process.exit(1); // Exit if can't connect to database
     }
 }
+
 module.exports = RunServer;
