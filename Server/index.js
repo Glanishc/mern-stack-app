@@ -4,13 +4,13 @@ const userRouter = require('./Routes/userRoutes');
 const contactRouter = require('./Routes/contactRoutes');
 const vehicleRouter = require('./Routes/vehicleRoutes');
 const cors = require('cors');
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-RunServer(); // Call the RunServer function to establish a connection
 app.use(express.json());
 app.use(cors());
+RunServer(); // Call the RunServer function to establish a connection
+
 
 app.use('/contact', contactRouter);
 app.use('/user', userRouter);
