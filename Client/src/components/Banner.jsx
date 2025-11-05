@@ -5,7 +5,7 @@ const Banner = () => {
     <>
       
         <video className="back-video" loop muted autoPlay>
-          <source src="BG1.mp4" type="video/mp4"/>
+          <source src="https://youtu.be/yuYom0ufoxk" type="video/mp4"/>
         </video>
         <div className='banner'>
       </div>
