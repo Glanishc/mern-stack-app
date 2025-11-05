@@ -13,30 +13,35 @@ const Register = () => {
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   const RegisterUser = async (e) => {
-    e.preventDefault()
-    if (dlno.length !== 16) {
-      alert("Driver's License Number must be exactly 16 characters.");
-      return;
-    }
-
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    if (!passwordRegex.test(password)) {
-      alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
-      return;
-    }
-
-    const response = await axios.post('https://mern-backend-app.azurewebsites.net/user/', {
+  e.preventDefault()
+  
+  if (dlno.length !== 16) {
+    alert("Driver's License Number must be exactly 16 characters.");
+    return;
+  }
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+  if (!passwordRegex.test(password)) {
+    alert("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.");
+    return;
+  }
+  
+  try {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/user/`, {
       dlno: dlno,
       email: email,
       password: password
     })
     console.log(response.data.data)
+    alert("Registration successful!")
     navigate('/login')
+  } catch (error) {
+    console.error("Registration error:", error)
+    alert("Registration failed: " + (error.response?.data?.message || error.message))
   }
+}
 
   return (
     <div className="regbox">
