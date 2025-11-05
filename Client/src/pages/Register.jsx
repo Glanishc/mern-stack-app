@@ -29,7 +29,7 @@ const Register = () => {
       return;
     }
 
-    const response = await axios.post('http://localhost:3000/user/', {
+    const response = await axios.post('https://mern-backend-app.azurewebsites.net/user/', {
       dlno: dlno,
       email: email,
       password: password
