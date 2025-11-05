@@ -1,16 +1,17 @@
 const express = require('express');
-const RunServer = require('./Database/connection'); // Adjust the path if necessary
+const RunServer = require('./Database/connection');
 const userRouter = require('./Routes/userRoutes');
 const contactRouter = require('./Routes/contactRoutes');
 const vehicleRouter = require('./Routes/vehicleRoutes');
 const cors = require('cors');
+
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(cors());
-RunServer(); // Call the RunServer function to establish a connection
 
+RunServer(); // Call the RunServer function to establish a connection
 
 app.use('/contact', contactRouter);
 app.use('/user', userRouter);
