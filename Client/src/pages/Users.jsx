@@ -54,7 +54,7 @@ const Users = () => {
                 <div className="hero-content">
                     <div className="image-container">
                         <video loop autoPlay muted>
-                            <source src="BG3.mp4" type="video/mp4" />
+                            <source src="https://mernvideos.blob.core.windows.net/mern-videos/BG3.mp4" type="video/mp4" />
                         </video>
                     </div>
                     <CountdownTimer />
