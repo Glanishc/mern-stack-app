@@ -22,7 +22,7 @@ const Login = () => {
         } catch (error) {
             console.log(error);
             if (error.response && error.response.data && error.response.data.message) {
-                alert(`Error: ${error.response.data.message}`);
+                alert(`Error: ${error.response.data.message}`); // Correct
             } else {
                 alert('Login failed. Please try again.');
             }
