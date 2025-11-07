@@ -28,7 +28,7 @@ const VehicleForm = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/vehicles/add', vehicleData);
+            const response = await axios.post('${import.meta.env.VITE_API_URL}/user/login`', vehicleData);
             alert(response.data.message);
             setErrorMessage('');
         } catch (error) {
