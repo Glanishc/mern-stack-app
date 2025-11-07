@@ -20,7 +20,7 @@ const Users = () => {
             button.classList.remove('apply-btn');
             button.classList.add('verification-btn');
             try {
-                const attendanceResponse = await fetch(`${API_URL}/attending/update-attendance`, {
+                const attendanceResponse = await fetch(`${API_URL}/user/update-attending`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
