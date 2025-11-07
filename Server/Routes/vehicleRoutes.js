@@ -1,6 +1,5 @@
 const express = require('express');
 
-app.use(express.json());
 const Vehicle = require('../Model/Vehicle'); // Adjust the path as needed
 
 const vehicleRouter = express.Router();
