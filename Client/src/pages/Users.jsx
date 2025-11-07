@@ -20,11 +20,11 @@ const Users = () => {
             button.classList.remove('apply-btn');
             button.classList.add('verification-btn');
             try {
-                const attendanceResponse = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
+                const attendanceResponse = await fetch(`${API_URL}/attending/update-attendance`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                    },
+                            },
                     body: JSON.stringify({ email }),
                 });
 
