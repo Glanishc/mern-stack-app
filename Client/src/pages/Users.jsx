@@ -20,6 +20,8 @@ const Users = () => {
             button.classList.remove('apply-btn');
             button.classList.add('verification-btn');
             try {
+                const API_URL = import.meta.env.VITE_API_URL || 'https://mern-backend-app-dfg8cja0ccfjg9c2.uaenorth-01.azurewebsites.net';
+                
                 const attendanceResponse = await fetch(`${API_URL}/user/update-attending`, {
                     method: 'POST',
                     headers: {
