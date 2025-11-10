@@ -29,7 +29,7 @@ const VehicleForm = () => {
 
         try {
             const API_URL = import.meta.env.VITE_API_URL || 'https://mern-backend-app-dfg8cja0ccfjg9c2.uaenorth-01.azurewebsites.net';
-            const response = await axios.post(`${API_URL}/vehicles`, vehicleData);
+            const response = await axios.post(`${API_URL}/vehicles/add`, vehicleData);
             alert(response.data.message);
             setErrorMessage('');
         } catch (error) {
